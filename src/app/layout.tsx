@@ -1,21 +1,11 @@
-import './globals.css'
-import Header from '@/components/header'
+import StyledComponentsRegistry from '../lib/registry';
 
-
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html>
       <body>
-        {/* Add header */}
-        <Header />
-        {children}
-
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
-  )
+  );
 }
