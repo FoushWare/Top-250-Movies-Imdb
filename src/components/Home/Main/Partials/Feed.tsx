@@ -55,12 +55,6 @@ const MovieList = [
 		"imDbRatingCount": "2261589"
 	},
 
-
-
-
-
-
-
 ];
 
 
