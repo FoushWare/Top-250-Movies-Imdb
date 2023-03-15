@@ -4,6 +4,7 @@ const fetchMovies = async (limit = 10) => {
 	// make call to our API  from  api endpoint api/movies
 	const data = await fetch('/api/movies');
 	const parsed = await data.json();
+	if (parsed.length === 0) return [];
 	const movies = parsed.slice(0, limit);
 	return movies;
 

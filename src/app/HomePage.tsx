@@ -1,6 +1,6 @@
 'use client';
-import Header from "@/components/Header";
-import MoviesList from "@/components/MoviesList";
+import Header from "@/components/Shared/Header";
+import MoviesList from "@/components/Home/MoviesList";
 
 const HomePage = () => {
 	return (
