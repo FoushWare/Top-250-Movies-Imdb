@@ -1,15 +1,8 @@
-import { optionsType } from '@/app/api/types';
 import { useQuery } from '@tanstack/react-query'
 
 const fetchMovies = async (limit = 10) => {
-	const options: optionsType = {
-		method: "GET",
-		headers: {
-			"x-rapidapi-key": process.env.APIKEY,
-			"x-rapidapi-host": "imdb-top-100-movies.p.rapidapi.com",
-		},
-	};
-	const data = await fetch('https://imdb-top-100-movies.p.rapidapi.com/', options);
+	// make call to our API  from  api endpoint api/movies
+	const data = await fetch('/api/movies');
 	const parsed = await data.json();
 	const movies = parsed.slice(0, limit);
 	return movies;

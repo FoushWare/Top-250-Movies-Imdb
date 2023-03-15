@@ -26,7 +26,7 @@ export type Movies = {
 export type optionsType = {
 	method: string;
 	headers: {
-		"x-rapidapi-key"?: string;
-		"x-rapidapi-host"?: string;
+		"X-RapidAPI-Key"?: string;
+		"X-RapidAPI-Host"?: string;
 	};
 };
