@@ -14,6 +14,10 @@ const SidebarWrapperStyle = styled.div`
 	background: #f0f0f0;
 	padding: 0px 19px;
 	border-left: 2px solid #999999;
+	// hide it on mobile
+	@media (max-width: 768px) {
+		display: none;
+	}
 `;
 
 export default function Sidebar() {

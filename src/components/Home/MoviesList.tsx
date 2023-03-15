@@ -11,6 +11,8 @@ import Sidebar from './Sidebar/Sidebar';
 const PageWrapperStyles = styled.div`
 		background-color: #C7C7C3;
 		width: 100%;
+		display: flex;
+		
 		`;
 const PageContentStyles = styled.div`
 		background:#fff;

@@ -14,6 +14,8 @@ export type Movie = {
 	director?: string[] | null;
 	writers?: string[] | null;
 	imdbid: string;
+	imDbRating?: string;
+	yourRating?: number;
 };
 
 export type Movies = {
