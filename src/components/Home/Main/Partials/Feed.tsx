@@ -53,9 +53,8 @@ export default function Feed() {
 
 	return (
 		<FeedStyles>
-			{data.map((movie: {
-				[x: string]: key | null | undefined; movie: Movie
-			}) => (
+			{data.map(({ movie }: { movie: Movie }
+			) => (
 				<MovieCard key={movie.rank} item={movie} />
 			))}
 
