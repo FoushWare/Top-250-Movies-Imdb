@@ -1,3 +1,4 @@
+import { Movie } from '@/types'
 import React from 'react'
 import ReactPlayer from 'react-player'
 import styled from 'styled-components'
@@ -15,11 +16,7 @@ margin: 1rem 0;
 }
 
 `
-const MovieImage = styled.div.attrs({
-	src: (props: { image: string }) => props.image,
-	alt: 'movie image'
-
-})`
+const MovieImage = styled.img`
 display: flex;
 align-items: center;
 justify-content: center;
@@ -39,7 +36,7 @@ export default function ShowCaseImageVideo({ movie }: { movie: Movie }) {
 	return (
 		<ShowCaseImageVideoWrapper>
 			{/* small placeholder image */}
-			<MovieImage image={movie.image} />
+			<MovieImage src={movie.image} />
 			<MovieVideo >
 				<ReactPlayer url={movie.trailer} width={600}
 					height={380} controls={true}
