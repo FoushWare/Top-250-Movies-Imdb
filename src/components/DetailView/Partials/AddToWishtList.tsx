@@ -7,12 +7,13 @@ const AddToWishtListWrapper = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 	margin-bottom: 1rem;
+	flex: 1;
 `
 
 const AddToWishtListButton = styled.button`
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	align-items: center;
 	padding: 0.5rem 1rem;
 	border: none;
@@ -36,7 +37,7 @@ const AddToWishtListIcon = styled.div`
 
 const AddToWishtListText = styled.span`
 	margin-left: 0.5rem;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	font-weight: 600;
 `
 

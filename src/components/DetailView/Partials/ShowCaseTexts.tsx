@@ -38,6 +38,13 @@ const Popularity = styled.div`
 	height: 1.5rem;
 	background: url('/popularity.svg') no-repeat center;
 	background-size: contain;
+`;
+
+const TitleYearWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
 `
 
 
@@ -47,10 +54,14 @@ const Popularity = styled.div`
 export default function ShowCaseTexts({ movie }: { movie: Movie }) {
 	return (
 		<ShowCaseTextsWrapper>
-			<MovieTitle>{movie.title}</MovieTitle>
-			<MovieYear>{movie.year}</MovieYear>
+			<TitleYearWrapper>
+				<MovieTitle>{movie.title}</MovieTitle>
+				<MovieYear>{movie.year}</MovieYear>
+			</TitleYearWrapper>
 			<IMDBRating>
 				<RatingStar />
+
+				⭐
 				{movie.imDbRating}
 			</IMDBRating>
 			<Popularity />

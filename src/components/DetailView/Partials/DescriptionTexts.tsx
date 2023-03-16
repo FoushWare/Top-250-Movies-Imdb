@@ -10,15 +10,28 @@ const MovieInfoList = styled.ul`
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	flex: 3;
+	padding: 0 1rem;
 `
 
 const MovieInfoItem = styled.li`
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	gap: 0.5rem;
 	align-items: center;
 	width: 100%;
 	margin-bottom: 0.5rem;
+	border-bottom: 1px solid #fff;
+	padding-bottom: 0.5rem;
+	color:#5089D5
+
+
+
+	&:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	
 `
 
 const MovieInfoTitle = styled.span`
@@ -30,7 +43,8 @@ const MovieInfoTitle = styled.span`
 const MovieInfoValue = styled.span`
 	font-size: 1.2rem;
 	font-weight: 400;
-	color: #fff;
+		color:#5089D5
+
 `
 
 
@@ -40,15 +54,17 @@ export default function DescriptionTexts({ movie }: { movie: Movie }) {
 		<MovieInfoList>
 			<MovieInfoItem>
 				<MovieInfoTitle>Director</MovieInfoTitle>
-				<MovieInfoValue>{movie.director}</MovieInfoValue>
+				<MovieInfoValue>Frank Darabont</MovieInfoValue>
 			</MovieInfoItem>
 			<MovieInfoItem>
-				<MovieInfoTitle>Writer</MovieInfoTitle>
-				<MovieInfoValue>{movie.writers}</MovieInfoValue>
+				<MovieInfoTitle>Writers</MovieInfoTitle>
+				<MovieInfoValue>Stephen KingFrank Darabont</MovieInfoValue>
 			</MovieInfoItem>
 			<MovieInfoItem>
-				<MovieInfoTitle>Actors</MovieInfoTitle>
-				<MovieInfoValue>{movie.actors}</MovieInfoValue>
+				<MovieInfoTitle>Stars</MovieInfoTitle>
+				<MovieInfoValue>
+					Tim RobbinsMorgan FreemanBob GuntonWilliam SadlerClancy BrownGil BellowsMark RolstonJames WhitmoreJeffrey DeMunnLarry BrandenburgNeil GiuntoliBrian LibbyDavid ProvalGeorge Martin
+				</MovieInfoValue>
 			</MovieInfoItem>
 		</MovieInfoList>
 	)
