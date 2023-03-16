@@ -12,8 +12,8 @@ const ShowCaseImageVideoWrapper = styled.div`
 `
 const MovieImage = styled.img`
 display: flex;
-	width: 30rem;
-	height: 20rem;
+	width: 10rem;
+	height: 10rem;
 	background: url('https://images.unsplash.com/photo-1542734047-7f7b0f5f5f5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') no-repeat center;
 	background-size: contain;
 	flex: 1;

@@ -4,21 +4,25 @@ import styled from 'styled-components';
 const MoviewMoreWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	flex: 1;
+	gap: 1rem;
 `;
-const MovieExtraVideos = styled.div`
-	min-height: 3rem;
+const MovieExtraImagesVideos = styled.div`
+	min-height: 8rem;
 	background: #313131;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+		text-transform: uppercase;
+		font-size: 0.75rem;
+		font-smoothing: antialiased;
+		color: #fff;
+		gap: 0.5rem;
+		letter-spacing: 0.16667em;
+		font-family: Roboto,Helvetica,Arial,sans-serif;
 `;
-const MovieExtraImages = styled.div`
-	min-height: 3rem;
-	background: #313131;
-	display: flex;
-	flex-direction: column;
-`;
+
 
 const VideoSVG = styled.div`
 width: 2rem;
@@ -47,15 +51,16 @@ export default function MoviewMore() {
 	return (
 		<MoviewMoreWrapper>
 
-			<MovieExtraVideos >
+			<MovieExtraImagesVideos >
 				<VideoSVG />
-				<Text> 5 Videos</Text>
-			</MovieExtraVideos>
+				<Text>5 Videos</Text>
+			</MovieExtraImagesVideos>
 
-			<MovieExtraImages />
-			<ImageSVG />
-			<Text> 99 Images</Text>
-			<MovieExtraImages />
+			<MovieExtraImagesVideos >
+				<ImageSVG />
+				<Text>99+ Extra Images</Text>
+			</MovieExtraImagesVideos>
+
 
 		</MoviewMoreWrapper>
 	)
