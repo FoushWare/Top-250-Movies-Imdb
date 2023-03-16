@@ -11,7 +11,7 @@ const page = async ({ params, searchParams }: {
 	};
 }) => {
 
-	const { id } = params;
+	const id = params?.id;
 	return <DetailedMovie id={id} />
 
 }
