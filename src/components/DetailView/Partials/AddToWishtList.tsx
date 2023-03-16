@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const AddToWishtListWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	margin-bottom: 1rem;
 	flex: 1;

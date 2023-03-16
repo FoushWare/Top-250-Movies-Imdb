@@ -24,6 +24,7 @@ const MovieInfoItem = styled.li`
 	border-bottom: 1px solid #fff;
 	padding-bottom: 0.5rem;
 	color:#5089D5
+	padding: 0.8rem 0;
 
 
 

@@ -36,6 +36,7 @@ export default function DetailedMovie({ id }) {
 
 	const DetailedPageWrapper = styled.div`
 	background: #1F1F1F;
+	height: 100%;
 	`;
 
 	const ContentWrapper = styled.div`
