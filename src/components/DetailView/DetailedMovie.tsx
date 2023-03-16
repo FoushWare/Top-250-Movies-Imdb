@@ -8,7 +8,7 @@ import DescriptionTexts from "./Partials/DescriptionTexts";
 import AddToWishtList from "./Partials/AddToWishtList";
 import Header from "../Shared/Header";
 
-export default function DetailedMovie({ id }) {
+export default function DetailedMovie({ id }: { id: string | undefined }) {
 
 	const { data, isLoading, isFetching } = useMovie(id);
 
