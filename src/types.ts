@@ -16,6 +16,7 @@ export type Movie = {
 	imdbid: string;
 	imDbRating?: string;
 	yourRating?: number;
+	actors?: string[] | null;
 };
 
 export type Movies = {
