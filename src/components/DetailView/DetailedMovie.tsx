@@ -3,9 +3,10 @@ import React from "react";
 import { useMovie } from "@/Hooks/Movies/useMovie";
 import styled from "styled-components";
 import ShowCaseTexts from "./Partials/ShowCaseTexts";
-import ShowCaseImageVideo from "./Partials/ShowCaseImageVideo";
+import ShowCaseImageVideo from "./Partials/ImagesVideos/ShowCaseImageVideo";
 import DescriptionTexts from "./Partials/DescriptionTexts";
 import AddToWishtList from "./Partials/AddToWishtList";
+import Header from "../Shared/Header";
 
 export default function DetailedMovie({ id }) {
 
@@ -35,6 +36,7 @@ export default function DetailedMovie({ id }) {
 
 	const DetailedPageWrapper = styled.div`
 	background: #1F1F1F;
+	height: 100vh;
 	`;
 
 	const ContentWrapper = styled.div`
@@ -43,6 +45,7 @@ export default function DetailedMovie({ id }) {
 	background: #2D2321;
 	padding: 2rem;
 	color: #fff;
+	height: 100%;
 	@media (max-width: 768px) {
 		width: 100%;
 	}
@@ -53,7 +56,8 @@ export default function DetailedMovie({ id }) {
 
 
 	return (
-		<div>
+		<>
+			<Header />
 			{
 				isLoading ? (
 					<p> Loading...</p>
@@ -70,6 +74,6 @@ export default function DetailedMovie({ id }) {
 					</DetailedPageWrapper>
 				)
 			}
-		</div >
+		</ >
 	);
 }
