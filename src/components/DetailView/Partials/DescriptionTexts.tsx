@@ -47,24 +47,56 @@ const MovieInfoValue = styled.span`
 		color:#5089D5
 
 `
+const MovieDescription = styled.p`
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: #fff;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+`;
+const GerenBadge = styled.div`
+	border-radius: 0.5rem;
+	font-size: 1.2rem;
+	font-weight: 600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 0.5rem;
+	padding: 0.5rem ;
+	color: #fff;
+	background: #2D2321;
+  border: 1px solid;
+
+`
 
 
 
 export default function DescriptionTexts({ movie }: { movie: Movie }) {
 	return (
 		<MovieInfoList>
+			<GerenBadge>
+				{movie.genre}
+			</GerenBadge>
+			<MovieDescription>
+				{movie.description}
+			</MovieDescription>
 			<MovieInfoItem>
 				<MovieInfoTitle>Director</MovieInfoTitle>
-				<MovieInfoValue>Frank Darabont</MovieInfoValue>
+				<MovieInfoValue>
+					{movie.director}
+				</MovieInfoValue>
 			</MovieInfoItem>
 			<MovieInfoItem>
 				<MovieInfoTitle>Writers</MovieInfoTitle>
-				<MovieInfoValue>Stephen KingFrank Darabont</MovieInfoValue>
+				<MovieInfoValue>
+					{movie.writers?.map((writer) => writer).join(', ')}
+
+				</MovieInfoValue>
 			</MovieInfoItem>
 			<MovieInfoItem>
 				<MovieInfoTitle>Stars</MovieInfoTitle>
 				<MovieInfoValue>
-					Tim RobbinsMorgan FreemanBob GuntonWilliam SadlerClancy BrownGil BellowsMark RolstonJames WhitmoreJeffrey DeMunnLarry BrandenburgNeil GiuntoliBrian LibbyDavid ProvalGeorge Martin
+					{movie.actors?.map((actor) => actor).join(', ')}
 				</MovieInfoValue>
 			</MovieInfoItem>
 		</MovieInfoList>

@@ -13,10 +13,21 @@ import {
 	Logo,
 	SearchBar,
 } from "@/styles/HeaderStyles";
+import { useRouter } from "next/navigation";
 const Header = () => {
+
+	const router = useRouter();
 	return (
 		<StyledHeader>
-			<Logo />
+			<Logo
+				onClick={
+					() => {
+						// navigate to home page
+						router.push(`/`)
+					}
+				}
+
+			/>
 			<NavbarDrawer>
 				<NavbarDrawerMenu />
 				<NavbarDrawerText>Menu</NavbarDrawerText>

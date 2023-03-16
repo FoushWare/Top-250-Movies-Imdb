@@ -23,12 +23,7 @@ const PageContentStyles = styled.div`
 		`;
 
 const MoviesList = () => {
-	const [moviesCount, setMoviesCount] = useState(25);
 
-	const { data, isLoading, isFetching } = useMovies(moviesCount);
-
-	if (isLoading) return <p>Loading...</p>
-	if (isFetching) return <p>Fetching...</p>
 
 	return (
 		<PageWrapperStyles>

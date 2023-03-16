@@ -33,6 +33,9 @@ const Logo = styled.img.attrs({
 	@media (max-width: 768px) {
 		order: 2;
 	}
+	:hover {
+		cursor: pointer;
+	}
 `;
 
 const NavbarDrawer = styled.div`

@@ -15,9 +15,10 @@ margin: 1rem 0;
 }
 
 `
-const MovieImage = styled.img.attrs({
-	src: 'https://api.lorem.space/image/movie?w=150&h=230',
+const MovieImage = styled.div.attrs({
+	src: (props: { image: string }) => props.image,
 	alt: 'movie image'
+
 })`
 display: flex;
 align-items: center;
@@ -38,9 +39,9 @@ export default function ShowCaseImageVideo({ movie }: { movie: Movie }) {
 	return (
 		<ShowCaseImageVideoWrapper>
 			{/* small placeholder image */}
-			<MovieImage />
+			<MovieImage image={movie.image} />
 			<MovieVideo >
-				<ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' width={600}
+				<ReactPlayer url={movie.trailer} width={600}
 					height={380} controls={true}
 				/>
 			</MovieVideo>

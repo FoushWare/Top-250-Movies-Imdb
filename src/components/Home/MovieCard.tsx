@@ -1,4 +1,5 @@
 import { Movie } from '@/types';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 import styled from 'styled-components';
 
@@ -9,7 +10,7 @@ const MovieCardStyles = styled.div`
 	align-items: center;
 	flex: 1;
 	background: #f0f0f0;
-	gap: 5px;
+	gap: 8px;
 	margin-bottom: 4px;
 	:hover {
 		cursor: pointer;
@@ -29,6 +30,12 @@ const TitleStyle = styled.div`
 	justify-content: space-between;
 	flex:3;
 	background: #f0f0f0;
+	color: #5EB5E8;
+	:hover {
+		cursor: pointer;
+		text-decoration: underline;
+
+	}
 `;
 const RankStyle = styled.div`
 	display: flex;
@@ -74,17 +81,27 @@ const WishlistIcon = styled.img.attrs({
 
 
 export default function MovieCard({ item }: { item: Movie }) {
+
+	// use router to navigate to detail page
+	const router = useRouter();
 	return (
 		<MovieCardStyles>
 			<ImageWrapper>
 				<MovieImage src={item.image} alt="Picture of the author" />
 			</ImageWrapper>
-			<TitleStyle > {item.rank}-{item.title} </TitleStyle>
+			<TitleStyle
+				onClick={() => {
+					// navigate to detail page
+					router.push(`/${item.id}`)
+
+				}}
+
+			> {item.rank}-{item.title} </TitleStyle>
 			<RankStyle>
 				{
-					item.imDbRating && (
+					item.rating && (
 						<>
-							<span>{item.imDbRating}</span>
+							<span>{item.rating}</span>
 							<span>⭐</span>
 						</>
 					)
