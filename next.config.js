@@ -10,12 +10,6 @@ const nextConfig = {
 	compiler: {
 		styledComponents: true,
 	},
-	images: {
-		domains: ["images.unsplash.com"],
-	},
-	env: {
-		NEXT_PUBLIC__APIKEY: process.env.NEXT_PUBLIC__APIKEY, },
-	},
 };
 
 module.exports = nextConfig;
