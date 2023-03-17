@@ -53,17 +53,10 @@ export default function Feed() {
 
 	return (
 		<FeedStyles>
-			{data.map(({ movie }: { movie: Movie }
-			) => (
-				<MovieCard key={movie.rank} item={movie} />
+			{data?.map((movie: Movie) => (
+				<MovieCard key={movie.id} movie={movie} />
 			))}
-
-			{/* load More Button */}
-			<LoadMoreButton onClick={() => setMoviesCount(moviesCount + 25)}
-			>
-				Load More
-			</LoadMoreButton>
-
+			<LoadMoreButton onClick={() => setMoviesCount(moviesCount + 25)}>Load More</LoadMoreButton>
 		</FeedStyles>
 	)
 }

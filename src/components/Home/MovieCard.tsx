@@ -80,28 +80,28 @@ const WishlistIcon = styled.img.attrs({
 
 
 
-export default function MovieCard({ item }: { item: Movie }) {
+export default function MovieCard({ movie }: { movie: Movie }) {
 
 	// use router to navigate to detail page
 	const router = useRouter();
 	return (
 		<MovieCardStyles>
 			<ImageWrapper>
-				<MovieImage src={item.image} alt="Picture of the author" />
+				<MovieImage src={movie?.image} alt="Picture of the author" />
 			</ImageWrapper>
 			<TitleStyle
 				onClick={() => {
 					// navigate to detail page
-					router.push(`/${item.id}`)
+					router.push(`/${movie.id}`)
 
 				}}
 
-			> {item.rank}-{item.title} </TitleStyle>
+			> {movie?.rank}-{movie?.title} </TitleStyle>
 			<RankStyle>
 				{
-					item.rating && (
+					movie?.rating && (
 						<>
-							<span>{item.rating}</span>
+							<span>{movie.rating}</span>
 							<span>⭐</span>
 						</>
 					)
@@ -110,9 +110,9 @@ export default function MovieCard({ item }: { item: Movie }) {
 			</RankStyle>
 			<YourRankStyle>
 				{
-					item.yourRating && (
+					movie?.yourRating && (
 						<>
-							<span>{item.yourRating}</span>
+							<span>{movie?.yourRating}</span>
 							<span>⭐</span>
 						</>
 					)
