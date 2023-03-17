@@ -2,6 +2,8 @@
 
 # Top 250 Movies on IMDb
 
+link 🚀 https://top-250-movies-imdb-m1bx3pkzo-foushware.vercel.app/ 🚀
+
 ## What i have done:
 
 - Nextjs Api to fetch data from IMDb [All Movies,Eeach Movie] [Server Side ]
@@ -26,3 +28,5 @@
 - Run `npm run dev` to run the project
 
 ## OR you can visit the deployed version on vercel
+
+https://top-250-movies-imdb-m1bx3pkzo-foushware.vercel.app/
