@@ -7,6 +7,7 @@ import ShowCaseImageVideo from "./Partials/ImagesVideos/ShowCaseImageVideo";
 import DescriptionTexts from "./Partials/DescriptionTexts";
 import AddToWishtList from "./Partials/AddToWishtList";
 import Header from "../Shared/Header";
+import LoadingSpinner from "../Shared/LoadingSpinner";
 
 export default function DetailedMovie({ id }: { id: string | undefined }) {
 
@@ -45,7 +46,7 @@ export default function DetailedMovie({ id }: { id: string | undefined }) {
 			<Header />
 			{
 				isLoading ? (
-					<p> Loading...</p>
+					<LoadingSpinner />
 				) : (
 					<DetailedPageWrapper>
 						<ContentWrapper>

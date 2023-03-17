@@ -1,3 +1,4 @@
+import LoadingSpinner from '@/components/Shared/LoadingSpinner';
 import { useMovies } from '@/Hooks/Movies/useMovies/useMovies';
 import { Movie } from '@/types';
 import { useState } from 'react';
@@ -42,13 +43,18 @@ const LoadMoreButton = styled.button`
 
 
 
+
+
+
 export default function Feed() {
 
 	const [moviesCount, setMoviesCount] = useState(25);
 
 	const { data, isLoading, isFetching } = useMovies(moviesCount);
 
-	if (isLoading) return <p>Loading...</p>
+	if (isLoading)
+		return <LoadingSpinner />;
+
 	if (isFetching) return <p>Fetching...</p>
 
 	return (
