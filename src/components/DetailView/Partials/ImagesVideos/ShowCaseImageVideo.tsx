@@ -8,8 +8,7 @@ import MoviewMore from './Partials/MoviewMore'
 const ShowCaseImageVideoWrapper = styled.div`
 display:flex;
 flex-direction: row;
-justify-content: flex-start;
-gap: 1rem;
+justify-content: space-between;
 margin: 1rem 0;
 @media (max-width: 768px) {
 	flex-direction: column;
@@ -29,6 +28,7 @@ max-width: 250px;
 `
 
 const MovieVideo = styled.div`
+
 `
 
 
@@ -38,7 +38,7 @@ export default function ShowCaseImageVideo({ movie }: { movie: Movie }) {
 			{/* small placeholder image */}
 			<MovieImage src={movie.image} />
 			<MovieVideo >
-				<ReactPlayer url={movie.trailer} width={600}
+				<ReactPlayer url={movie.trailer} width={500}
 					height={380} controls={true}
 				/>
 			</MovieVideo>

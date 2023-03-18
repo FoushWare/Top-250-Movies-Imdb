@@ -12,6 +12,10 @@ const PageWrapperStyles = styled.div`
 		background-color: #C7C7C3;
 		width: 100%;
 		display: flex;
+		@media (max-width: 768px) {
+			height: 100%;
+		}
+
 		
 		`;
 const PageContentStyles = styled.div`

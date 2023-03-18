@@ -5,6 +5,7 @@ const MoviewMoreWrapper = styled.div`
 display: flex;
 flex-direction: column;
 gap: 1rem;
+flex:2;
 
 `;
 const MovieExtraVideos = styled.div`
@@ -13,7 +14,8 @@ display:flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-padding: 3rem 6rem;
+height: 50%;
+width: 100%;
 `;
 const MovieExtraImages = styled.div`
 background: #414141;
@@ -21,7 +23,8 @@ display:flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-padding: 3rem 6rem;
+height: 50%;
+width: 100%;
 `;
 
 
