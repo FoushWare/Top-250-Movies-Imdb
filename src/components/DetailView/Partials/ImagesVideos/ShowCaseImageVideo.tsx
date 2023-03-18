@@ -10,6 +10,7 @@ display:flex;
 flex-direction: row;
 justify-content: space-between;
 margin: 1rem 0;
+gap:10px;
 @media (max-width: 768px) {
 	flex-direction: column;
 }

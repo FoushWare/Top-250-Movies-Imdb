@@ -1,6 +1,6 @@
-// Import your Client Component
 import HomePage from './HomePage';
 
-const Page = async () => <HomePage />;
+const Page: React.FC = () => <HomePage />;
 
 export default Page;
+
