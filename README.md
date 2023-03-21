@@ -4,6 +4,21 @@
 
 link 🚀 https://top-250-movies-imdb-m1bx3pkzo-foushware.vercel.app/ 🚀
 
+### Testing the project:
+
+```
+npm run test
+```
+
+## How to run the project:
+
+- Clone the project
+- Run `npm install` to install all the dependencies
+
+- register to rapidapi.com and get your api key and add it to the .env file
+
+- Run `npm run dev` to run the project
+
 ## What i have done:
 
 - Nextjs Api to fetch data from IMDb [All Movies,Eeach Movie] [Server Side ]
@@ -17,16 +32,3 @@ link 🚀 https://top-250-movies-imdb-m1bx3pkzo-foushware.vercel.app/ 🚀
 - React Player to play trailer of each movie
 
 - Used React Router to navigate between pages
-
-## How to run the project:
-
-- Clone the project
-- Run `npm install` to install all the dependencies
-
-- register to rapidapi.com and get your api key and add it to the .env file
-
-- Run `npm run dev` to run the project
-
-## OR you can visit the deployed version on vercel
-
-https://top-250-movies-imdb-m1bx3pkzo-foushware.vercel.app/
