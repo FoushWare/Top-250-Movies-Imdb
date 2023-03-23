@@ -1,6 +1,6 @@
 import StyledComponentsRegistry from '../lib/registry';
-import ReactQueryWrapper from './ReactQueryWrapper';
-import './globals.css'
+import ReactQueryWrapper from '../Providers/ReactQueryWrapper';
+import '@/styles/globals.css'
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
