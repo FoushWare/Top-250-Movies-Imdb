@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import { useMovie } from "@/Hooks/Movies/useMovie";
+import { useMovie } from "@/Hooks/Movies/useMovie/useMovie";
 import styled from "styled-components";
 import ShowCaseTexts from "./Partials/ShowCaseTexts";
 import ShowCaseImageVideo from "./Partials/ImagesVideos/ShowCaseImageVideo";
