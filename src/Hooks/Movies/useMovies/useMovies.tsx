@@ -13,10 +13,13 @@ const fetchMovies = async (limit = 10) => {
 }
 
 const useMovies = (limit: number | undefined) => {
-	return useQuery({
-		queryKey: ['movies', limit],
-		queryFn: () => fetchMovies(limit),
-	})
+
+	const { data, isLoading, isFetching }
+		= useQuery({
+			queryKey: ['movies', limit],
+			queryFn: () => fetchMovies(limit),
+		})
+	return { data, isLoading, isFetching }
 }
 
 export { useMovies, fetchMovies }

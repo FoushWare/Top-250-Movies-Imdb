@@ -47,7 +47,6 @@ const LoadMoreButton = styled.button`
 
 
 export default function Feed() {
-
 	const [moviesCount, setMoviesCount] = useState(25);
 
 	const { data, isLoading, isFetching } = useMovies(moviesCount);
@@ -55,10 +54,11 @@ export default function Feed() {
 	if (isLoading)
 		return <LoadingSpinner />;
 
-	if (isFetching) return <p>Fetching...</p>
+	if (isFetching) return <p data-testid="isFetching">Fetching...</p>
 
 	return (
 		<FeedStyles>
+			{data?.length === 0 && <p data-testid="noMoviesFound">No movies found</p>}
 			{data?.map((movie: Movie) => (
 				<MovieCard key={movie.id} movie={movie} />
 			))}

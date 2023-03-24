@@ -85,7 +85,7 @@ export default function MovieCard({ movie }: { movie: Movie }) {
 	// use router to navigate to detail page
 	const router = useRouter();
 	return (
-		<MovieCardStyles>
+		<MovieCardStyles data-testid="movieCard">
 			<ImageWrapper>
 				<MovieImage src={movie?.image} alt="Picture of the author" />
 			</ImageWrapper>
